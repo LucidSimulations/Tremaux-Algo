@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>TREMAUX'S ALGORITHM</title>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="logo1.ico">
+    <style>
+    .row {
+      background-color: #e3e3e3;
+      border-radius: 15px;
+    }
+    .col-md-10 {
+      background-color: #f5f3f3;  
+    }
+    </style>
+  </head>
+
+  <body>    
+    <!--Nav bar-->
+    <nav class="navbar navbar-dark bg-dark">
+    <header class="navbar navbar-dark flex-column flex-md-row bd-navbar">
+    <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+    </ul>
+    <div class="navbar-nav-scroll">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+      <a class="nav-link" href="#"><img src="logo1.png"><font color="white">
+      &nbsp;&nbsp;&nbsp;LUCID SIMULATIONS&nbsp;&nbsp;&nbsp;</font></a>
+      </li>
+      </ul>
+    </div>
+    </div>
+    </header>
+    </nav>
+
+    <div id="sketch-holder" ,class="container">
+    </div>
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-1"><p>
+        
+        </p>
+        </div>
+        <div class="col-10 "><br>
+        <h3 align="center">MAZE SOLVING ALGORITHM</h3>
+        <p>
+          Trémaux's algorithm, invented by Charles Pierre Trémaux, is an efficient method to find the way out of a maze that requires drawing lines on the floor to mark a path, and is guaranteed to work for all mazes that have well-defined passages. A path from a junction is either unvisited, marked once or marked twice. The algorithm works according to the following rules:<br><br>
+
+Mark each path once, when you follow it. The marks need to be visible at both ends of the path. Therefore, if they are being made as physical marks, rather than stored as part of a computer algorithm, the same mark should be made at both ends of the path.<br>
+<ul>
+<li>Never enter a path which has two marks on it.</li>
+<li>If you arrive at a junction that has no marks (except possibly for the one on the path by which you entered), choose an arbitrary unmarked path, follow it, and mark it.</li>
+Otherwise:
+<li>If the path you came in on has only one mark, turn around and return along that path, marking it again. In particular this case should occur whenever you reach a dead end.</li>
+<li>If not, choose arbitrarily one of the remaining paths with the fewest marks (zero if possible, else one), follow that path, and mark it.</li>
+</ul>
+When you finally reach the solution, paths marked exactly once will indicate a way back to the start. If there is no exit, this method will take you back to the start where all paths are marked twice. In this case each path is walked down exactly twice, once in each direction. The resulting walk is called a bidirectional double-tracing.<br><br>
+
+Essentially, this algorithm, which was discovered in the 19th century, has been used about a hundred years later as depth-first search.<br>
+        </p>
+
+        <p>
+          <h6>Simulation assumptions and constraints:-</h6>
+          <ul>
+            <li>This simulation is based on maze containing blocks,same idea can be applied for maze with thin walls.</li>
+            <li>Solution may contain loops.</li>
+          </ul>
+        </p>
+        <p align="right">Theory source : www.wikipedia.org</p>
+        </div>
+        <div class="col-1">
+        
+        </div>
+      </div>
+      <hr>
+    </div>
+
+  </body>
+</html>
